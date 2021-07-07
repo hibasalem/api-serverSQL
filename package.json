@@ -1,0 +1,31 @@
+{
+  "name": "api-serversql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --coverage --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hibasalem/api-serverSQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hibasalem/api-serverSQL/issues"
+  },
+  "homepage": "https://github.com/hibasalem/api-serverSQL#readme",
+  "devDependencies": {
+    "@code-fellows/supergoose": "^1.1.0",
+    "jest": "^27.0.6"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "pg": "^8.6.0"
+  }
+}
