@@ -21,7 +21,9 @@ Dynamic API Phase 3: Add Persistence (Database) to your API
 
 ---
 
-- ### [PR](https://github.com/hibasalem/api-serverSQL/pull/1)
+- ### [PR 1 ](https://github.com/hibasalem/api-serverSQL/pull/1)
+- ### [PR 2 ](https://github.com/hibasalem/api-serverSQL/pull/2)
+- 
 
 ---
 
@@ -141,13 +143,3 @@ Dynamic API Phase 3: Add Persistence (Database) to your API
   - npm test
 
 ---
-
-- ## tests
-
-  - response with 404 on a bad route
-  - response with 404 on a bad method
-  - Create a record using POST
-  - Read a list of records using GET
-  - Read a record using GET
-  - Update a record using PUT
-  - Destroy a record using DELETE
