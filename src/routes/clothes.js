@@ -3,9 +3,9 @@
 const express = require('express');
 const router = express.Router();
 
-const clothesModel = require('../models/clothes');
+// const clothesModel = require('../models/clothes');
 const Collection = require('../models/clothes-collection');
-const clothes = new Collection(clothesModel);
+const clothes = new Collection();
 
 router.get('/', getClothes);
 router.get('/:id', getClothes);

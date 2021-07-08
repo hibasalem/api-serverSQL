@@ -5,7 +5,7 @@ const pool = require('./pool');
 class FoodCollection {
   create(obj) {
     const sql =
-      'INSERT INTO food (name,ingridents,caluries) VALUES ($1,$2,$3) RETURNING *;';
+      'INSERT INTO food(name,ingridents,caluries) VALUES($1,$2,$3) RETURNING *;';
     const save = [obj.name, obj.ingridents, obj.caluries];
     return pool.query(sql, save);
   }
@@ -20,7 +20,7 @@ class FoodCollection {
 
   update(id, obj) {
     const sql =
-      'UPDATE food SET name=$1,ingridents=$2,caluries=$3 WHERE id=$4 RETURNING ';
+      'UPDATE food SET name=$1,ingridents=$2,caluries=$3 WHERE id=$4 RETURNING *;';
     const save = [obj.name, obj.ingridents, obj.caluries, id];
     return pool.query(sql, save);
   }

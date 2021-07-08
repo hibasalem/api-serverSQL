@@ -3,9 +3,9 @@
 const express = require('express');
 const router = express.Router();
 
-const foodModel = require('../models/food');
+// const foodModel = require('../models/food');
 const Collection = require('../models/food-collection');
-const food = new Collection(foodModel);
+const food = new Collection();
 
 router.get('/', getFood);
 router.get('/:id', getFood);
