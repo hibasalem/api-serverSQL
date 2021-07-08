@@ -2,20 +2,16 @@
 
 # basic-api-server
 
-this project is a practice prioject for lab 02 of 401 course at asac
+this project is a practice prioject for lab 09 of 401 course at asac
 
 - **Author** : hiba salem
 
-- ### description
-
-Dynamic API server to practice standards compliant Express server
-Dynamic API Phase 3: Add Persistence (Database) to your API
 
 ---
 
 - ### NML
 
-![NML](./lab04.jpg)
+![NML](./lab09.jpg)
 
 [NML](https://drive.google.com/file/d/1xFnXqAxvzYhNYf09JsOBLloL1n0ttqU4/view?usp=sharing)
 
@@ -29,7 +25,7 @@ Dynamic API Phase 3: Add Persistence (Database) to your API
 
 - ### deploy links
 
-  - [main deployment](https://api-serverSQLmain.herokuapp.com)
+  - [main deployment](https://api-serversql.herokuapp.com/)
 
   - [tests report](https://github.com/hibasalem/api-serverSQL/actions)
 
@@ -46,6 +42,7 @@ Dynamic API Phase 3: Add Persistence (Database) to your API
 
   - `.env requirements`
   - `PORT` - Port Number
+  - `DATABASE_URL` 
 
 ---
 
@@ -57,10 +54,24 @@ Dynamic API Phase 3: Add Persistence (Database) to your API
   ```
     [
         {
-            "id": "819a8ef6-ceee-4252-bfab-6de4a94a3c1a",
-            "data": {
-                "any": "any"
-            }
+            "id": 1,
+            "name": "any",
+            "ingridents": "any",
+            "caluries": number
+        }
+    ]
+
+  ```
+  
+  or 
+  ```
+    [
+        {
+            "id": 1,
+            "type": "any",
+            "session": "any",
+            "price": number,
+            "avilable": true/false
         }
     ]
 
@@ -71,66 +82,131 @@ Dynamic API Phase 3: Add Persistence (Database) to your API
 
   ```
         {
-            "id": "${id}",
-            "data": {
-                "test2": "test"
-            }
+            "id": ${id},
+            "name": "any",
+            "ingridents": "any",
+            "caluries": number
         }
 
   ```
+  or 
+  
+  ```
+          {
+            "id": ${id},
+            "type": "any",
+            "session": "any",
+            "price": number,
+            "avilable": true/false
+        }
+  ```
+
 
   - `/api/v2/clothes` or `/api/v2/clothes`
   - post
-  - send in the body `{"any": "any"}`
+  - send in the body `         {
+            "name": "any",
+            "ingridents": "any",
+            "caluries": number
+        }`     or `          {
+            "type": "any",
+            "session": "any",
+            "price": number,
+            "avilable": true/false
+        }`
 
   ```
-    {
-        "id": "any",
-        "data": {
-            "any": "any"
+        {
+            "id": 1,
+            "name": "any",
+            "ingridents": "any",
+            "caluries": number
         }
-    }
 
+  ```
+  
+  or 
+  ```
+  
+            {
+            "id": 1,
+            "type": "any",
+            "session": "any",
+            "price": number,
+            "avilable": true/false
+        }
+  
   ```
 
   - `/api/v2/clothes${id}` or `/api/v2/clothes${id}`
-  - put
-  - send in the body `{"any": "any"}`
+   - put
+  - send in the body `         {
+            "id": ${id},
+            "name": "any",
+            "ingridents": "any",
+            "caluries": number
+        }`     or `          {
+            "id": ${id},
+            "type": "any",
+            "session": "any",
+            "price": number,
+            "avilable": true/false
+        }`
 
   ```
-    {
-        "id": "${id}",
-        "data": {
-            "any": "any"
+        {
+            "id": ${id},
+            "name": "any",
+            "ingridents": "any",
+            "caluries": number
         }
-    }
-
+  ```
+  
+  or 
+  ```            {
+            "id": ${id},
+            "type": "any",
+            "session": "any",
+            "price": number,
+            "avilable": true/false
+        }
   ```
 
   - `/api/v2/clothes${id}` or `/api/v2/clothes${id}`
   - delete
 
   ```
-  "undefind"
-
+        {
+            "id": ${id},
+            "name": "any",
+            "ingridents": "any",
+            "caluries": number
+        }
+  ```
+  
+  or 
+  ```            {
+            "id": ${id},
+            "type": "any",
+            "session": "any",
+            "price": number,
+            "avilable": true/false
+        }
   ```
 
   - `/`
 
   ```
-
-  {
   home route
-  }
-
+  
   ```
 
-  - `/bad`
+  - `/foo`
 
   ```
 
   {
-  "error": "some thing went wrong"
+  "error": "404 not found"
   }
 
   ```
