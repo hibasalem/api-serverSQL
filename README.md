@@ -23,7 +23,7 @@ Dynamic API Phase 3: Add Persistence (Database) to your API
 
 - ### [PR 1 ](https://github.com/hibasalem/api-serverSQL/pull/1)
 - ### [PR 2 ](https://github.com/hibasalem/api-serverSQL/pull/2)
-- 
+
 
 ---
 
